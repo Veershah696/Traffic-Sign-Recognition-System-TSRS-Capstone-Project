@@ -1,1 +1,1 @@
-include ':app' ,':tensorflow-lite'
+rootProject.name = "Traffic-Sign-Recognition-System-TSRS-Capstone-Project"
