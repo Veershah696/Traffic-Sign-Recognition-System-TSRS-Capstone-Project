@@ -1,14 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.carassistant">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-sdk />
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="true" />
 
     <application
         android:name=".application.CarAssistantApplication"
@@ -21,7 +20,8 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".ui.activities.DetectorActivity">
+            android:name=".ui.activities.DetectorActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
